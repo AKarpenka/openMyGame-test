@@ -1,0 +1,22 @@
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-container h1 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.app-suspense-fallback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.app-suspense-spinner {
+  min-height: 200px;
+}

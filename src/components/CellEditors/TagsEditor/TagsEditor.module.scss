@@ -1,0 +1,35 @@
+@use '../../../styles/variables' as *;
+
+.tags-editor {
+  width: 100%;
+  position: relative;
+  padding: 4px 0;
+}
+
+.tags-editor__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+
+  .ant-space {
+    flex: 1;
+  }
+}
+
+.tags-editor__tag {
+  user-select: none;
+}
+
+.tags-editor__input {
+  width: 64px;
+  height: 22px;
+  margin-inline-end: 8px;
+  vertical-align: top;
+}
+
+.tags-editor__tag-plus {
+  height: 22px;
+  border-style: dashed;
+}
+

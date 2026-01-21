@@ -1,0 +1,149 @@
+@use '../../styles/variables' as *;
+
+.editableTableContainer {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: $border-radius-table;
+  box-shadow: $shadow-table;
+  overflow: hidden;
+}
+
+.editableTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $color-white;
+
+  thead {
+    background-color: $color-gray-light;
+  }
+
+  th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid $color-gray-border;
+    border-right: 1px solid $color-gray-border;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid $color-gray-border;
+    border-right: 1px solid $color-gray-border;
+    position: relative;
+    min-height: 40px;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  tbody tr:hover {
+    background-color: $color-gray-light;
+  }
+}
+
+.editableCell {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.editableCell:hover:not(.readonly) {
+  background-color: $color-gray-lighter;
+}
+
+.readonly {
+  cursor: default;
+  background-color: $color-gray-lightest;
+  color: $color-gray-text;
+}
+
+.editing {
+  background-color: $color-blue-bg;
+  padding: 0;
+}
+
+.error {
+  background-color: $color-red-bg;
+}
+
+.error .cellDisplay {
+  color: $color-red-primary;
+}
+
+.dirty {
+  background-color: $color-yellow-bg;
+  border-left: 3px solid $color-yellow-primary;
+  position: relative;
+}
+
+.dirty .cellDisplay {
+  color: $color-yellow-primary;
+}
+
+.dirty::before {
+  content: '●';
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  color: $color-yellow-primary;
+  font-size: 8px;
+  line-height: 1;
+}
+
+.dirty.editing {
+  border-left: 3px solid $color-yellow-primary;
+}
+
+.cellDisplay {
+  min-height: 20px;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.cellDisplayWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.cellDisplayErrorIcon {
+  color: $color-red-primary;
+  font-size: 14px;
+  flex-shrink: 0;
+  cursor: help;
+}
+
+.cellEditorWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.editableTableHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px;
+  background-color: $color-gray-light;
+  border: 1px solid $color-gray-border;
+  border-radius: $border-radius-input;
+}
+
+.tableBodyLoadMoreCell {
+  padding: 16px;
+  text-align: center;
+}
+
+.tableBodyLoadMoreSpinner {
+  min-height: 40px;
+}
+
+.tableBodyLoadMoreMessage {
+  color: $color-gray-text;
+  font-size: 12px;
+}
+

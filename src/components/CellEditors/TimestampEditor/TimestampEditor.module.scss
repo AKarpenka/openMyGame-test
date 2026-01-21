@@ -1,0 +1,22 @@
+@use '../../../styles/variables' as *;
+
+.timestamp-editor {
+  width: 100%;
+  position: relative;
+}
+
+.timestamp-editor__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+
+  .ant-picker {
+    flex: 1;
+  }
+}
+
+.timestamp-editor__picker {
+  width: 100%;
+}
+

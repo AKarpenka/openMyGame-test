@@ -1,0 +1,29 @@
+@use '../../../styles/variables' as *;
+
+.number-editor {
+  width: 100%;
+  position: relative;
+}
+
+.number-editor__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+
+  .ant-input-number {
+    flex: 1;
+  }
+}
+
+.number-editor__error-icon {
+  color: $color-red-primary;
+  font-size: 14px;
+  flex-shrink: 0;
+  cursor: help;
+}
+
+.number-editor__input {
+  width: 100%;
+}
+

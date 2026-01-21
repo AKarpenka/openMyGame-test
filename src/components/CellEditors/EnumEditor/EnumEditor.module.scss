@@ -1,0 +1,22 @@
+@use '../../../styles/variables' as *;
+
+.enum-editor {
+  width: 100%;
+  position: relative;
+}
+
+.enum-editor__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+
+  .ant-select {
+    flex: 1;
+  }
+}
+
+.enum-editor__select {
+  width: 100%;
+}
+

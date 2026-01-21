@@ -1,0 +1,93 @@
+@use '../../../styles/variables' as *;
+
+.complex-value-editor {
+  width: 100%;
+  position: relative;
+}
+
+.complex-value-editor__trigger {
+  padding: 0;
+  height: auto;
+  line-height: 1.5;
+}
+
+.complex-value-editor__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+
+  .complex-value-editor__trigger {
+    flex: 1;
+  }
+}
+
+.complex-value-editor__error-icon {
+  color: $color-red-primary;
+  font-size: 14px;
+  flex-shrink: 0;
+  cursor: help;
+}
+
+.complex-value-editor__modal {
+  .ant-modal-body {
+    padding: 16px;
+  }
+}
+
+.complex-value-editor__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.complex-value-editor__editor-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.complex-value-editor__editor {
+  width: 100%;
+  overflow: auto;
+  font-family: '"Fira Code", "Fira Mono", "Consolas", "Monaco", "Courier New", monospace';
+  font-size: 14px;
+  min-height: 300px;
+  background-color: $color-gray-lighter;
+  border: 1px solid $color-gray-border;
+  border-radius: $border-radius-input;
+  
+  textarea {
+    outline: none;
+    resize: none;
+  }
+  
+  pre {
+    margin: 0;
+    padding: 0;
+  }
+  
+  &.complex-value-editor__editor--error {
+    border-color: $color-red-primary;
+  }
+}
+
+.complex-value-editor__error-message {
+  padding: 8px 12px;
+  background-color: $color-red-bg;
+  border: 1px solid $color-red-hover;
+  border-radius: $border-radius-input;
+  color: $color-red-primary;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.complex-value-editor__hint {
+  padding: 8px 12px;
+  background-color: $color-yellow-bg;
+  border: 1px solid $color-yellow-hover;
+  border-radius: $border-radius-input;
+  color: $color-yellow-primary;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
