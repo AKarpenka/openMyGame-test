@@ -49,6 +49,11 @@ https://open-my-game-test.vercel.app/
 - Node.js (версия 18 или выше)
 - npm или yarn
 
+### Добавление env
+
+- В корне проекта есть .env.sample -> удалите .sample
+- Добавьте необходимые переменные, как описано в .env.sample
+
 ### Установка зависимостей
 
 ```bash
