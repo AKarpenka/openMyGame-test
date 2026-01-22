@@ -2,14 +2,24 @@
 
 .editableTableContainer {
   width: 100%;
-  overflow-x: auto;
+  height: calc(100vh - 130px);
+  min-height: 400px;
   border-radius: $border-radius-table;
   box-shadow: $shadow-table;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
+}
+
+.tableScrollWrapper {
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
 }
 
 .editableTable {
   width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
   background-color: $color-white;
 
@@ -24,6 +34,11 @@
     border-bottom: 2px solid $color-gray-border;
     border-right: 1px solid $color-gray-border;
 
+    &:first-child {
+      min-width: 100px;
+      width: 100px;
+    }
+
     &:last-child {
       border-right: none;
     }
@@ -35,6 +50,11 @@
     border-right: 1px solid $color-gray-border;
     position: relative;
     min-height: 40px;
+
+    &:first-child {
+      min-width: 100px;
+      width: 100px;
+    }
 
     &:last-child {
       border-right: none;

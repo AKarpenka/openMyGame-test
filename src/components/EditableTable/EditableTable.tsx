@@ -117,29 +117,31 @@ function EditableTableInner({
         onSaveAll={handleSaveAllChanges}
       />
 
-      <table className={styles.editableTable}>
-          <thead>
-            <tr>
-              {columns.map((column) => (
-                <th key={column.key}>{column.label}</th>
-              ))}
-            </tr>
-          </thead>
-          
-          <TableBody
-            data={data}
-            editingCell={editingCell}
-            tempValue={tempValue}
-            errors={errors}
-            isCellDirty={isCellDirty}
-            getCellHandlers={getCellHandlers}
-            enableLazyLoading={enableLazyLoading}
-            loadMoreRef={loadMoreRef}
-            isFetchingNextPage={isFetchingNextPage}
-            hasMore={hasMore}
-            isLazyLoading={isLazyLoading}
-          />
-        </table>
+      <div className={styles.tableScrollWrapper}>
+        <table className={styles.editableTable}>
+            <thead>
+              <tr>
+                {columns.map((column) => (
+                  <th key={column.key}>{column.label}</th>
+                ))}
+              </tr>
+            </thead>
+            
+            <TableBody
+              data={data}
+              editingCell={editingCell}
+              tempValue={tempValue}
+              errors={errors}
+              isCellDirty={isCellDirty}
+              getCellHandlers={getCellHandlers}
+              enableLazyLoading={enableLazyLoading}
+              loadMoreRef={loadMoreRef}
+              isFetchingNextPage={isFetchingNextPage}
+              hasMore={hasMore}
+              isLazyLoading={isLazyLoading}
+            />
+          </table>
+      </div>
     </div>
   );
 }

@@ -8,8 +8,6 @@ import { tableService } from './tableService';
  */
 const USE_MOCK_API = import.meta.env.VITE_USE_MOCK_API !== 'false';
 
-console.log('import.meta.env.VITE_USE_MOCK_API', import.meta.env.VITE_USE_MOCK_API);
-
 export const tableDataService: ITableDataService = USE_MOCK_API 
   ? mockTableService 
   : tableService;
